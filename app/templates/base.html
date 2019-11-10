@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Webscraping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>First 10 news from pasmi.ru</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Link</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entry in news %}
+            <tr>
+                <td>{{ entry.title }}</td>
+                <td>{{ entry.link }}</td>
+                <td>{{ entry.desc }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
